@@ -1,0 +1,115 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-image-wrap { position: relative; }
+
+.about-img-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-img-placeholder img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-img-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 40%, rgba(200,245,66,0.04));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.img-corner {
+  position: absolute;
+  width: 20px; height: 20px;
+  border-color: var(--accent);
+  border-style: solid;
+  z-index: 2;
+}
+.img-corner.tl { top: 16px;    left: 16px;  border-width: 2px 0 0 2px; }
+.img-corner.tr { top: 16px;    right: 16px; border-width: 2px 2px 0 0; }
+.img-corner.bl { bottom: 16px; left: 16px;  border-width: 0 0 2px 2px; }
+.img-corner.br { bottom: 16px; right: 16px; border-width: 0 2px 2px 0; }
+
+.about-accent-box {
+  position: absolute;
+  bottom: -24px; right: -24px;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 20px 28px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.about-accent-box strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+
+.about-text p {
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  margin-top: 48px;
+  border: 1px solid var(--border);
+}
+
+.stat {
+  background: var(--surface);
+  padding: 24px;
+  text-align: center;
+}
+
+.stat-num {
+  font-family: var(--display);
+  font-size: 42px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.stat-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+  .about { grid-template-columns: 1fr; gap: 48px; }
+  .about-accent-box { right: 0; }
+}

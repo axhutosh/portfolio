@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#080808"/>
+  <rect x="1" y="1" width="30" height="30" fill="none" stroke="#c8f542" stroke-width="1.5"/>
+  <text
+    x="16"
+    y="22"
+    font-family="'Bebas Neue', sans-serif"
+    font-size="16"
+    font-weight="700"
+    fill="#c8f542"
+    text-anchor="middle"
+    letter-spacing="1"
+  >AK</text>
+</svg>
