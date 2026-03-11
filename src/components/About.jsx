@@ -16,7 +16,7 @@ export default function About() {
           <span className="img-corner bl" />
           <span className="img-corner br" />
           {/* Replace with: <img src="/assets/images/profile.jpg" alt="Alex Mercer" /> */}
-           <img src="/src/assets/images/profile.jpg" alt="Ashutosh Kumar" />
+           <img src="/profile.jpg" alt="Ashutosh Kumar" />
         </div>
         <div className="about-accent-box">
           <strong>2025</strong>
